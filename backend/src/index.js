@@ -1,5 +1,8 @@
-import { app, port } from './server.js'
+import app from './server.js'
+import connection from './database.js'
 
-app.listen(port, () => {
-    console.log(`Server on port ${port}`)
+connection()
+
+app.listen(app.get("port"), () => {
+    console.log(`Server on port ${app.get("port")}`)
 })

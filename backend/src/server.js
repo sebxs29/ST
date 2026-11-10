@@ -1,17 +1,20 @@
 // MODULOS REQUERIDOS
 import express from 'express'
+import dotenv from 'dotenv'
 
 // INICIALIZACIONES
 const app = express()
-const port = 3000
 
 // CONFIGURACIONES
+dotenv.config()
 
 // MIDDLEWARES
 
 // VARIABLES GLOBALES
+app.set("port", 3000)
+app.set("port", process.env.PORT || 3000)
 
 // RUTAS
 
 // EXPORTAR LA INSTANCIA DE APP
-export {app, port}
+export default app
